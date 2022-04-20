@@ -41,7 +41,7 @@ Route::group(['middleware' => ['jwt.verify:admin,kasir,owner']], function(){
 
 
     
-Route::group(['middleware' => ['jwt.verify:admin']], function(){
+Route::group(['middleware' => ['jwt.verify:admin,kasir']], function(){
     //PAKET
     Route::post('paket', 'PaketController@store');
     Route::get('paket', 'PaketController@getAll');
